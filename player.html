@@ -1,0 +1,28 @@
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+</style>
+<iframe  src="erro.html" width="100%" height="100%" allowfullscreen="true" scrolling="no" frameborder="0" id="conteudojs"></iframe>
+<script type="text/javascript">
+		const urlParams = new URLSearchParams(window.location.search);
+		const address = urlParams.get("link");
+		const catgoria = urlParams.get("catgoria");
+
+		const linkapi = 'https://embed.warezcdn.net/';
+		const barra1 = '/';
+		const res = `${linkapi}${catgoria}${barra1}${address}`;
+
+		// document.querySelector('#conteudojs').src = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png"
+		// document.getElementById("conteudojs").src = "https://wwf.org";
+		// alert(res);
+		// var element = document.getElementById('conteudojs');
+		// element.innerHTML = '<b>Hello World!</b>';
+		var conteudojs = document.querySelector("#conteudojs");
+
+		conteudojs.setAttribute('src', res);
+		
+	</script>
+
+
